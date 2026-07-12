@@ -1,0 +1,21 @@
+CREATE DATABASE IF NOT EXISTS bookshelf;
+USE bookshelf;
+
+CREATE TABLE IF NOT EXISTS users (
+    id INT(11) AUTO_INCREMENT PRIMARY KEY,
+    first_name VARCHAR(100) NOT NULL,
+    last_name VARCHAR(100) NOT NULL,
+    email VARCHAR(150) NOT NULL,
+    UNIQUE KEY (email)
+);
+
+CREATE TABLE IF NOT EXISTS books (
+    id INT(11) AUTO_INCREMENT PRIMARY KEY,
+    title VARCHAR(255) NOT NULL,
+    author VARCHAR(100) NOT NULL,
+    publisher VARCHAR(150) NULL,
+    year INT(11) NULL,
+    ISBN VARCHAR(20) NULL,
+    full_name INT(11) NULL
+);
+
